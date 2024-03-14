@@ -66,4 +66,24 @@
   .label {
     @apply text-[0.8rem] leading-[1.14rem] tracking-[0.012rem];
   }
+  .project {
+    /* Top margin: 50vh minus 7.5rem */
+    margin-top: calc(50vh - 7.5rem);
+
+    /* Bottom margin: 50vh minus 7.5rem */
+    margin-bottom: calc(50vh - 7.5rem);
+  }
+  .hidden-scroll:-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Firefox */
+  .hidden-scroll {
+    scrollbar-width: none;
+  }
+  
+  /* Edge and IE */
+  .hidden-scroll {
+    -ms-overflow-style: none;
+  }
 }

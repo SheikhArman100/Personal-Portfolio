@@ -4,17 +4,17 @@ import React from 'react'
 
 const Projects = () => {
   return (
-    <article className='relative h-screen w-full overflow-hidden'>
-      <Grid />
-      <section className='absolute left-0 top-0 flex min-h-screen w-full flex-col'>
-        <MarqueeTitle />
-        <div className='flex w-full flex-1 flex-col o overflow-y-auto overflow-scroll'>
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-        </div>
+    <article className='relative'>
+      
+      
+      <MarqueeTitle/>
+      <Grid/>
+      <section className='absolute top-[7.5rem] left-0 hidden-scroll h-[calc(100vh-7.5rem)] w-full  overflow-hidden overflow-y-auto'>
+        <Project />
+        <Project />
+        <Project />
+        <Project />
+        <Project />
       </section>
     </article>
   )
@@ -31,20 +31,26 @@ const MarqueeTitle = () => {
 }
 const Project = () => {
   return (
-    <div className='flex w-full flex-1 flex-col md:flex-row px-[3.5rem] py-8'>
-      <div className='aspect-[1/1.2] w-80 bg-black mx-auto'></div>
-      <div className='relative mt-3 h-full w-full max-w-[20rem] mx-auto flex-1 '>
-        <div className='absolute h-full w-1  bg-black' />
-        <div className='ml-4   '>
-          <h4 className='heading-4'>Baking Shop</h4>
-          <p className='body '>
-            This is baking shop website where you cake,cupcake, chocolate etc
-            the main purpose of this website is to show animated interaction
-            with some advanced functionalities
-          </p>
-          <div className='flex items-center gap-x-3 mt-3'>
-            <Link href="/" className='p-4 bg-black text-white rounded-full'>Github Repo</Link>
-            <Link href="/" className='p-4 border border-black rounded-full'>Preview Link</Link>
+    <div className='flex h-[calc(100vh-7.5rem)] w-full items-center justify-center '>
+      <div className='flex flex-col md:flex-row md:items-center gap-3 md:gap-x-8 lg:gap-x-[5rem] xl:gap-x-[8rem]'>
+        <div className='mx-auto aspect-[1/1.2] w-80 lg:w-[25rem] bg-black'></div>
+        <div className='relative mx-auto  h-full w-full max-w-[20rem] flex-1 '>
+          <div className='absolute h-full w-1  bg-black' />
+          <div className='ml-8 lg:ml-12   '>
+            <h3 className='heading-3'>Baking Shop</h3>
+            <p className='body '>
+              This is baking shop website where you cake,cupcake, chocolate etc
+              the main purpose of this website is to show animated interaction
+              with some advanced functionalities
+            </p>
+            <div className='mt-3 flex items-center gap-x-3'>
+              <Link href='/' className='rounded-full bg-black p-4 text-white'>
+                Github Repo
+              </Link>
+              <Link href='/' className='rounded-full border border-black p-4'>
+                Preview Link
+              </Link>
+            </div>
           </div>
         </div>
       </div>
