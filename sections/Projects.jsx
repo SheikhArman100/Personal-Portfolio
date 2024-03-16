@@ -4,17 +4,21 @@ import React from 'react'
 import Video from 'next-video'
 import photographerVideo from '/videos/Photographer Portfolio.mp4'
 import { projects } from '@/libs/data.js'
+import Image from 'next/image.js'
+import SmoothScroll from '@/components/SmoothScroll.jsx'
 
 const Projects = () => {
   return (
     <article className='relative'>
       <MarqueeTitle />
       <Grid />
-      <section className='hidden-scroll absolute left-0 top-[7.5rem] h-[calc(100vh-7.5rem)] w-full  overflow-hidden overflow-y-auto'>
+      
+      <section className='hidden-scroll absolute left-0 top-[7.5rem] h-[calc(100vh-7.5rem)] w-full  overflow-hidden overflow-y-auto' data-lenis-prevent>
         {projects.map(project => (
           <Project key={project.id} project={project} />
         ))}
       </section>
+      
     </article>
   )
 }
@@ -48,6 +52,14 @@ const Project = ({ project }) => {
           <div className='ml-8 lg:ml-12   '>
             <h3 className='heading-4 md:heading-3'>{project.title}</h3>
             <p className='body '>{project.description}</p>
+            <div className='flex items-center gap-x-2 mt-2'>
+              {project.languages.map((language,index)=>(
+                <div key={index} className='flex items-center py-1 px-3 rounded-full border border-black gap-x-1 '>
+                  <Image height="16" width="16" src={language.icon} alt={language.title}/>
+                  <p className='label font-medium'>{language.title}</p>
+                </div>
+              ))}
+            </div>
             <div className='mt-3 flex items-center gap-x-3'>
               <Link
                 href={project.github}
