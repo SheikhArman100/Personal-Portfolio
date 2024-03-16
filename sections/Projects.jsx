@@ -1,20 +1,19 @@
 import Grid from '@/components/Grid.jsx'
 import Link from 'next/link.js'
 import React from 'react'
+import Video from 'next-video'
+import photographerVideo from '/videos/Photographer Portfolio.mp4'
+import { projects } from '@/libs/data.js'
 
 const Projects = () => {
   return (
     <article className='relative'>
-      
-      
-      <MarqueeTitle/>
-      <Grid/>
-      <section className='absolute top-[7.5rem] left-0 hidden-scroll h-[calc(100vh-7.5rem)] w-full  overflow-hidden overflow-y-auto'>
-        <Project />
-        <Project />
-        <Project />
-        <Project />
-        <Project />
+      <MarqueeTitle />
+      <Grid />
+      <section className='hidden-scroll absolute left-0 top-[7.5rem] h-[calc(100vh-7.5rem)] w-full  overflow-hidden overflow-y-auto'>
+        {projects.map(project => (
+          <Project key={project.id} project={project} />
+        ))}
       </section>
     </article>
   )
@@ -29,25 +28,37 @@ const MarqueeTitle = () => {
     </div>
   )
 }
-const Project = () => {
+const Project = ({ project }) => {
   return (
     <div className='flex h-[calc(100vh-7.5rem)] w-full items-center justify-center '>
-      <div className='flex flex-col md:flex-row md:items-center gap-3 md:gap-x-8 lg:gap-x-[5rem] xl:gap-x-[8rem]'>
-        <div className='mx-auto aspect-[1/1.2] w-80 lg:w-[25rem] bg-black'></div>
+      <div className='flex flex-col gap-3 md:flex-row md:items-center md:gap-x-8 lg:gap-x-[5rem] xl:gap-x-[8rem]'>
+        <div className='relative mx-auto flex aspect-[1/1.2] w-80 items-center justify-center bg-zinc-800 lg:w-[25rem]'>
+          <Video
+            src={project.video}
+            autoPlay
+            muted
+            loop
+            playsInline
+            controls={false}
+            className='h-[80%] w-[80%]'
+          />
+        </div>
         <div className='relative mx-auto  h-full w-full max-w-[20rem] flex-1 '>
           <div className='absolute h-full w-1  bg-black' />
           <div className='ml-8 lg:ml-12   '>
-            <h3 className='heading-3'>Baking Shop</h3>
-            <p className='body '>
-              This is baking shop website where you cake,cupcake, chocolate etc
-              the main purpose of this website is to show animated interaction
-              with some advanced functionalities
-            </p>
+            <h3 className='heading-4 md:heading-3'>{project.title}</h3>
+            <p className='body '>{project.description}</p>
             <div className='mt-3 flex items-center gap-x-3'>
-              <Link href='/' className='rounded-full bg-black p-4 text-white'>
+              <Link
+                href={project.github}
+                className='rounded-full bg-black p-4 text-white'
+              >
                 Github Repo
               </Link>
-              <Link href='/' className='rounded-full border border-black p-4'>
+              <Link
+                href={project.preview}
+                className='rounded-full border border-black p-4'
+              >
                 Preview Link
               </Link>
             </div>
