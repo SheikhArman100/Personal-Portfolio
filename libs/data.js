@@ -5,6 +5,19 @@ import bakingShop from"@/videos/baking Shop.mp4"
 import taskList from"@/videos/task list.mp4"
 import newsJournal from"@/videos/News Journal.mp4"
 import photographerPortfolio from"@/videos/Photographer Portfolio.mp4"
+import baking1 from "@/public/assets/gallery/baking1.png"
+import baking2 from "@/public/assets/gallery/baking2.png"
+import baking3 from "@/public/assets/gallery/baking3.png"
+import baking4 from "@/public/assets/gallery/baking4.png"
+import baking5 from "@/public/assets/gallery/baking5.png"
+import task1 from "@/public/assets/gallery/task1.png"
+import task2 from "@/public/assets/gallery/task2.png"
+import car1 from "@/public/assets/gallery/car1.png"
+import music1 from "@/public/assets/gallery/music1.png"
+import music2 from "@/public/assets/gallery/music2.png"
+import news1 from "@/public/assets/gallery/news1.png"
+import photographer1 from "@/public/assets/gallery/photographer1.png"
+import photographer2 from "@/public/assets/gallery/photographer2.png"
 
 export const projects = [
   {
@@ -83,3 +96,5 @@ export const projects = [
     preview: 'https://news-journal-kcez.vercel.app/'
   }
 ]
+
+export const gallery=[baking1,news1,photographer2,baking2,music2,baking3,music1,car1,baking4,photographer1,baking5,task1]
