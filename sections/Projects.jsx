@@ -9,7 +9,7 @@ import SmoothScroll from '@/components/SmoothScroll.jsx'
 
 const Projects = () => {
   return (
-    <article className='relative'>
+    <article className='relative h-screen'>
       <MarqueeTitle />
       <Grid />
       

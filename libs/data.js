@@ -97,4 +97,4 @@ export const projects = [
   }
 ]
 
-export const gallery=[baking1,news1,photographer2,baking2,music2,baking3,music1,car1,baking4,photographer1,baking5,task1]
+export const gallery=[baking1,photographer2,news1,baking2,music2,baking3,music1,car1,baking4,photographer1,baking5,task1]

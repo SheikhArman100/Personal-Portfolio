@@ -1,4 +1,5 @@
 import AboutMe from "@/sections/AboutMe.jsx";
+import ContactMe from "@/sections/ContactMe.jsx";
 import Gallery from "@/sections/Gallery.jsx";
 import HeroSection from "@/sections/HeroSection.jsx";
 import Projects from "@/sections/Projects.jsx";
@@ -10,6 +11,7 @@ export default function Home() {
       <AboutMe/>
       <Projects/>
       <Gallery/>
+      <ContactMe/>
     </main>
   );
 }

@@ -14,7 +14,7 @@ const Gallery = () => {
   })
 
   const { height } = dimension;
-  const y = useTransform(scrollYProgress, [0, 1], [0, height * 2])
+  const y = useTransform(scrollYProgress, [0, 1], [0, height * 1.4])
 
   const y2 = useTransform(scrollYProgress, [0, 1], [0, height * 3.3])
 
@@ -38,7 +38,7 @@ const Gallery = () => {
   return (
     <section
     ref={galleryRef}
-      className='h-[175vh] overflow-hidden bg-[rgb(45_45_45)]'
+      className='h-[175vh] overflow-hidden bg-[rgb(45_45_45)] '
     >
       <div  className='relative top-[-12.5vh] flex h-[200vh] gap-2 p-2'>
         <Column images={[gallery[0], gallery[1], gallery[2]]} y={y} />
