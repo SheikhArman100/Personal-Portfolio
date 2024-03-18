@@ -24,14 +24,14 @@ const AboutMe = () => {
         <h1 className='heading-1 text-left '> About</h1>
         <div className='flex-1'>
           <p className='body text-left'>
-            My Name is Sheikh MD Arman.I have been studying ReactJS for over a
+            My Name is Sheikh MD Arman.
+            I have been studying ReactJS for over a
             year now. Through an Udemy course, I began to learn ReactJS. Since
             then, I've always tried to stay up-to-date with the latest
-            technology related to Reactjs. I gained a lot of expertise in
-            packages like Nextjs, Tailwind CSS, Typescript, NextAuth, Redux,
-            Zustand, Framer-Motion, Tanstack Query, and Zod. For your
-            information, I have updated myself to the current release of NextJS
-            14. You can see some of my projects on GitHub. I recently graduated
+            technology related to Reactjs.
+            I have also updated myself to the current release of NextJS
+            14. You can see some of my projects on GitHub. 
+            I recently graduated
             from Brac University, where I also studied Python-related topics
             such as competitive programming, machine learning, and data
             analysis.
@@ -53,7 +53,7 @@ const AboutMe = () => {
             className='h-full w-full object-cover'
           />
         </div>
-        <div className='mx-auto mt-4 flex max-w-xl flex-1 flex-wrap justify-center lg:mx-0  '>
+        <div className='mx-auto mt-4 hidden md:flex max-w-xl flex-1 flex-wrap justify-center lg:mx-0  '>
           <Skill icon={react} title='React.js' />
           <Skill icon={next} title='Next.js' />
           <Skill icon={node} title='Node.js' />

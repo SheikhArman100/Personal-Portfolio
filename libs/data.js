@@ -1,29 +1,24 @@
-import mongodb from '@/public/assets/mongodb.png'
-import nextjs from '@/public/assets/next.png'
-import nodejs from '@/public/assets/node.png'
-import bakingShop from"@/videos/baking Shop.mp4"
-import taskList from"@/videos/task list.mp4"
-import newsJournal from"@/videos/News Journal.mp4"
-import photographerPortfolio from"@/videos/Photographer Portfolio.mp4"
 import baking1 from "@/public/assets/gallery/baking1.png"
 import baking2 from "@/public/assets/gallery/baking2.png"
 import baking3 from "@/public/assets/gallery/baking3.png"
 import baking4 from "@/public/assets/gallery/baking4.png"
 import baking5 from "@/public/assets/gallery/baking5.png"
-import task1 from "@/public/assets/gallery/task1.png"
-import task2 from "@/public/assets/gallery/task2.png"
 import car1 from "@/public/assets/gallery/car1.png"
 import music1 from "@/public/assets/gallery/music1.png"
 import music2 from "@/public/assets/gallery/music2.png"
 import news1 from "@/public/assets/gallery/news1.png"
 import photographer1 from "@/public/assets/gallery/photographer1.png"
 import photographer2 from "@/public/assets/gallery/photographer2.png"
+import task1 from "@/public/assets/gallery/task1.png"
+import mongodb from '@/public/assets/mongodb.png'
+import nextjs from '@/public/assets/next.png'
+import nodejs from '@/public/assets/node.png'
 
 export const projects = [
   {
     id: 1,
     title: 'Baking Shop',
-    video: bakingShop,
+    video: "https://res.cloudinary.com/dhvttipbk/video/upload/v1710748413/Personal_Portfolio/baking_Shop_pkhtma.mp4",
     description:
       'This is baking shop website where you can buy cake,cupcake, chocolate etc. This website is designed and created by me with some excellent interaction',
     languages: [
@@ -46,7 +41,7 @@ export const projects = [
   {
     id: 2,
     title: 'Task list App',
-    video:taskList,
+    video:"https://res.cloudinary.com/dhvttipbk/video/upload/v1710748524/Personal_Portfolio/task_list_id8cxh.mp4",
     description: 'The concept and design of this tasklist website were heavily inspired by Todoist.Using this, You can easily manage your daily tasks',
     languages: [{
         icon: nextjs,
@@ -66,7 +61,7 @@ export const projects = [
   {
     id: 3,
     title: 'Photographer Portfolio',
-    video:photographerPortfolio,
+    video:"https://res.cloudinary.com/dhvttipbk/video/upload/v1710748499/Personal_Portfolio/Photographer_Portfolio_frqfan.mp4",
     description: 'This a personal portfolio for photographer too showcase their photography.The website is full of some complex interaction',
     languages: [{
         icon: nextjs,
@@ -78,7 +73,7 @@ export const projects = [
   {
     id: 4,
     title: 'News Journal',
-    video:newsJournal,
+    video:"https://res.cloudinary.com/dhvttipbk/video/upload/v1710748479/Personal_Portfolio/News_Journal_rssvqy.mp4",
     description: 'This is a news-journal website where you can get updated news every 10 minutes.This is a collection of news from different news portal',
     languages: [{
         icon: nextjs,

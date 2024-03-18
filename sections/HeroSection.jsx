@@ -41,7 +41,7 @@ const HeroSection = () => {
         <MotionDiv variants={heroDiv} className='flex items-center justify-between'>
           {/* <h4 className='heading-4 font-cursive'>Sheikh Arman</h4> */}
           <Link href='/' className='relative'>
-            <MotionDiv variants={logoAnimation} className='absolute w-full h-full bg-red-500 origin-right'/>
+            
             <Image
               src={logo}
               height='40'
@@ -90,7 +90,7 @@ const HeroSection = () => {
         </div>
 
         <div className='flex items-center justify-between '>
-          <button>Download CV</button>
+          <button></button>
           <FollowMe />
         </div>
       </MotionDiv>
