@@ -1,6 +1,6 @@
 import FollowMe from '@/components/FollowMe.jsx'
 import { MotionDiv } from '@/components/MotionDiv.jsx'
-import DownloadCV from '@/components/downloadCV.jsx'
+import DownloadCV from '@/components/DownloadCV.jsx'
 import {
   heroContainer,
   heroRevealContainer,
