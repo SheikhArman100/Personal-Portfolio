@@ -6,7 +6,7 @@ import { Copyright, Facebook, Linkedin, LinkedinIcon } from 'lucide-react'
 
 const ContactMe = () => {
   return (
-    <div className='h-screen w-full bg-gray-300 px-4  py-4 sm:px-8 lg:px-[2rem] xl:px-[4rem] flex flex-col'>
+    <section id='contactMe' className='h-screen w-full bg-gray-300 px-4  py-4 sm:px-8 lg:px-[2rem] xl:px-[4rem] flex flex-col'>
       <div className='flex items-center justify-between'>
         <Link href='/' className='relative'>
           <Image
@@ -32,7 +32,7 @@ const ContactMe = () => {
        <button></button>
        <div className='flex items-center gap-x-1 body font-medium'><Copyright/><span>March,2024</span></div>
       </div>
-    </div>
+    </section>
   )
 }
 

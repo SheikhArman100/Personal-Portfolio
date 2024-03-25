@@ -2,7 +2,7 @@
 import { useRef, useState } from 'react'
 import { motion } from 'framer-motion';
 
-export default function FramerMagnetic({children}) {
+export default function FramerMagnetic({children,index}) {
     const ref = useRef(null);
     const [position, setPosition] = useState({x:0,y:0});
 
@@ -25,8 +25,9 @@ export default function FramerMagnetic({children}) {
             ref={ref}
             onMouseMove={handleMouse}
             onMouseLeave={reset}
-            animate={{x, y}}
-            transition={{type: "spring", stiffness: 150, damping: 15, mass: 0.1}}
+            initial={{scale:0}}
+            animate={{scale:1,x, y}}
+            transition={{scale:{delay:4+(0.15*index),duration:0.3,ease:[0.33, 1, 0.68, 1]},type: "spring", stiffness: 150, damping: 15, mass: 0.1}}
             className='cursor-pointer p-2'
         >
             {children}
