@@ -1,19 +1,22 @@
-import { Facebook, Instagram, Twitter } from 'lucide-react'
+import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react'
 import FramerMagnetic from './FramerMagnetic.jsx'
+import Link from 'next/link'
 
 const FollowMe = () => {
   return (
     <div className=' flex  items-center justify-center gap-x-4 '>
       <FramerMagnetic index="1">
-        <Facebook strokeWidth='2' className=' stroke-black' />
+        <Link href="https://www.facebook.com/arman.abir.58/"><Facebook strokeWidth='2' className=' stroke-black' /></Link>
       </FramerMagnetic>
 
       <FramerMagnetic index="2">
-        <Instagram strokeWidth='2' className='  stroke-black' />
+        <Link href="https://www.instagram.com/_arman100__/"><Instagram strokeWidth='2' className='  stroke-black' /></Link>
+        
       </FramerMagnetic>
 
       <FramerMagnetic index="3">
-        <Twitter strokeWidth='2' className='  stroke-black' />
+        <Link href="https://www.linkedin.com/in/sheikharman100/"><Linkedin strokeWidth='2' className='  stroke-black' /></Link>
+        
       </FramerMagnetic>
     </div>
   )
