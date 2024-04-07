@@ -39,7 +39,7 @@ const Gallery = () => {
     <section
     ref={galleryRef}
       className='h-[175vh] overflow-hidden bg-[rgb(45_45_45)] '
-      data-lenis-prevent
+      // data-lenis-prevent
     >
       <div  className='relative top-[-12.5vh] flex h-[200vh] gap-2 p-2'>
         <Column images={[gallery[0], gallery[1], gallery[2]]} y={y} />

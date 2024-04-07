@@ -49,7 +49,7 @@ const HeroSection = () => {
       >
         <div className='flex items-center justify-between'>
           <Link href='/' className='relative'>
-            <h4 className='heading-4 font2 font-semibold'>Sheikh Arman</h4>
+            <h4 className='heading-4 font2 font-bold'>Sheikh Arman</h4>
             <MotionDiv
               variants={logoReveal}
               className='absolute left-0 top-0 h-full w-full origin-right  bg-blueColor'
@@ -72,7 +72,7 @@ const HeroSection = () => {
           <div className='flex w-full items-center justify-center gap-x-6 lg:gap-x-12 xl:gap-x-[5rem]'>
             <div className='mx-auto hidden  max-w-xs text-center md:flex flex-wrap gap-x-2 justify-center xl:mx-0'>
             {paragraph.split(" ").map((word, index) => (
-            <MotionDiv key={index} className='body ' variants={wordAnimation(index)}
+            <MotionDiv key={index} className='body font2 font-medium' variants={wordAnimation(index)}
 >
               {word}
 
@@ -110,7 +110,7 @@ const HeroSection = () => {
           </span>
           <div className='mx-auto mt-3 max-w-xs text-center md:hidden    flex  flex-wrap gap-x-1 justify-center xl:mx-0'>
             {paragraph.split(" ").map((word, index) => (
-            <MotionDiv key={index} className='body ' variants={wordAnimation(index)}
+            <MotionDiv key={index} className='body font2 font-medium' variants={wordAnimation(index)}
 >
               {word}
 

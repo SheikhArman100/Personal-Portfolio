@@ -1,5 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
+'use client'
+
+import RevealTitle from '@/components/RevealTitle.jsx'
+import image1 from '@/public/assets/profile.jpg'
+import { motion, useInView } from 'framer-motion'
 import Image from 'next/image.js'
+import { useRef } from 'react'
+
 import React from 'react'
 import profile from '@/public/assets/profile.jpg'
 import react from '@/public/assets/react.png'
@@ -16,74 +23,89 @@ import email from '@/public/assets/email.png'
 import phone from '@/public/assets/phone.png'
 import github from '@/public/assets/github.png'
 import linkedin from '@/public/assets/linkedin.png'
+import { MotionDiv } from '@/components/MotionDiv.jsx'
+import { revealImageAnimation } from '@/libs/animation/aboutMe.animation.js'
 
 const AboutMe = () => {
   return (
-    <article className='flex min-h-screen w-full flex-col justify-center  '>
-      <section className='w-full  px-4 py-4 sm:px-8 md:flex md:gap-x-4 lg:gap-x-[4rem] lg:px-[2rem] xl:px-[4rem] '>
-        <h1 className='heading-1 text-left '> About</h1>
-        <div className='flex-1'>
-          <p className='body text-left'>
-            My Name is Sheikh MD Arman.
-            I have been studying ReactJS for over a
-            year now. Through an Udemy course, I began to learn ReactJS. Since
-            then, I've always tried to stay up-to-date with the latest
-            technology related to Reactjs.
-            I have also updated myself to the current release of NextJS
-            14. You can see some of my projects on GitHub. 
-            I recently graduated
-            from Brac University, where I also studied Python-related topics
-            such as competitive programming, machine learning, and data
-            analysis.
-          </p>
-          <div className=' mx-auto mt-6 grid w-fit  grid-cols-1 gap-3   sm:grid-cols-2  '>
-            <Contact icon={email} label='sheikharman100@gmail.com' />
-            <Contact icon={phone} label='+8801892555458' />
-            <Contact icon={github} label='github.com/SheikhArman100' />
-            <Contact icon={linkedin} label='linkedin.com/in/sheikharman100' />
-          </div>
-        </div>
-      </section>
-      <section className='flex  w-full   flex-col px-4  py-4  sm:px-8 md:flex-row md:justify-center lg:gap-x-[4rem] lg:px-[2rem]  xl:gap-x-[8rem] xl:px-[4rem] '>
-        <div className='relative mx-auto mt-4 h-80 w-80 md:mx-0'>
-          <Image
-            fill
-            src={profile}
-            alt='profile'
-            className='h-full w-full object-cover'
+    <section className='flex min-h-screen w-full flex-col items-start bg-whiteColor px-4  sm:px-8 xl:flex-row lg:px-[2rem] xl:px-[4rem]'>
+      {/* left side */}
+      <div className='sticky top-0 flex h-screen w-full xl:w-1/2 flex-col justify-between py-12 gap-8 lg:px-8 xl:py-[6rem] '>
+        <div className='flex justify-end'>
+          <RevealTitle
+            phrases={[
+              'Hello!! My name is SK. MD. Arman.',
+              ' I am a full stack web developer'
+            ]}
+            phraseStyle='heading-5 md:heading-4 2xl:heading-3 font-medium'
           />
         </div>
-        <div className='mx-auto mt-4 hidden md:flex max-w-xl flex-1 flex-wrap justify-center lg:mx-0  '>
-          <Skill icon={react} title='React.js' />
-          <Skill icon={next} title='Next.js' />
-          <Skill icon={node} title='Node.js' />
-          <Skill icon={mongodb} title='MongoDB' />
-          <Skill icon={prisma} title='Prisma' />
-          <Skill icon={supabase} title='Supabase' />
-          <Skill icon={stripe} title='Stripe' />
-          <Skill icon={tailwind} title='Tailwind' />
-          <Skill icon={typescript} title='Typescript' />
-          <Skill icon={mysql} title='Mysql' />
+        <div className=' relative h-60 w-40 md:h-[22rem] md:w-60 xl:h-[28rem] xl:w-[20rem] bg-black '>
+          <MotionDiv variants={revealImageAnimation} initial="initial" whileInView="animate"  viewport={{ once: true }} className='absolute top-0 left-0 w-full h-full bg-whiteColor z-10 origin-bottom'/>
+          <Image src={image1} fill alt='image2' className='object-cover' />
         </div>
-      </section>
-    </article>
+      </div>
+      {/* center side  */}
+      <div className='flex-1 py-[50vh] '>
+        <ul className='flex flex-col items-center justify-center '>
+          <AboutUsTitle>
+            <p className='text-[1.25rem] lg:heading-5 flex  flex-wrap justify-center  gap-x-2'>
+              I am a dedicated and enthusiastic junior engineer with a strong
+              foundation in programming languages such as Python and Javascript.
+              I am dedicated to always upgrading my skills and remaining updated
+              on upcoming technology and industry trends.
+            </p>
+          </AboutUsTitle>
+
+          <AboutUsTitle>
+            <p className='text-[1.25rem] lg:heading-5 flex  flex-wrap justify-center  gap-x-2'>
+              I have been studying ReactJS for over a year now. Through an Udemy
+              course, I began to learn ReactJS. Since then, I've always tried to
+              stay up-to-date with the latest technology related to Reactjs
+              including NextJS 14. You can see some of my projects on GitHub.I
+              also have expertise in backend technologies
+            </p>
+          </AboutUsTitle>
+
+          <AboutUsTitle>
+            <div className='flex  flex-wrap justify-center  gap-12 max-w-lg opacity-70'>
+              <Image height="40" width="40" src={react} alt='React.js' />
+              <Image height="40" width="40" src={next} alt='Next.js' />
+              <Image height="40" width="40" src={node} alt='Node.js' />
+              <Image height="40" width="40" src={mongodb} alt='MongoDB' />
+              <Image height="40" width="40" src={prisma} alt='Prisma' />
+              <Image height="40" width="40" src={supabase} alt='Supabase' />
+              <Image height="40" width="40" src={stripe} alt='Stripe' />
+              <Image height="40" width="40" src={tailwind} alt='Tailwind' />
+              <Image height="40" width="40" src={typescript} alt='Typescript' />
+              <Image height="40" width="40" src={mysql} alt='Mysql' />
+            </div>
+      </AboutUsTitle>
+        </ul>
+      </div>
+      {/* right side */}
+      {/* <div className='hidden sticky top-0 lg:flex h-screen items-center  px-8'>
+        <div className=' relative h-80 w-80 bg-black'>
+          <Image src={image1} fill className='object-cover' alt='image2' />
+        </div>
+      </div> */}
+    </section>
   )
 }
 
-const Skill = ({ icon, title }) => {
+const AboutUsTitle = ({ children }) => {
+  const containerRef = useRef(null)
+  const isInView = useInView(containerRef, { margin: '-50% 0px -50% 0px' })
   return (
-    <div className='flex w-fit items-center gap-x-2 px-4 py-2'>
-      <Image src={icon} height='40' width='40' alt={title} />
-      <h5 className='heading-5 font-medium'>{title}</h5>
-    </div>
-  )
-}
-const Contact = ({ icon, label }) => {
-  return (
-    <div className='flex items-center gap-x-4'>
-      <Image src={icon} height='24' width='24' alt={label} />
-      <label className='body whitespace-wrap font-semibold'>{label}</label>
-    </div>
+    <motion.li
+      ref={containerRef}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: isInView ? 1 : 0 }}
+      transition={{ delayChildren: 0.3, staggerChildren: 0.2 }}
+      className=' h-full max-w-2xl    overflow-hidden md:py-8  '
+    >
+      {children}
+    </motion.li>
   )
 }
 
