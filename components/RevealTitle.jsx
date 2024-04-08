@@ -30,10 +30,10 @@ const RevealTitle = ({ phrases,  phraseStyle }) => {
   const isInView=useInView(containerRef)
 
   return (
-    <motion.div ref={containerRef} variants={revealContainer} initial="initial" animate={isInView?"animate":"initial"}  viewport={{ once: true }}  className=" ">
+    <motion.div ref={containerRef} variants={revealContainer} initial="initial" animate={isInView?"animate":"initial"}  viewport={{ once: true }}  className=" h-full w-full">
       {phrases.map((phrase, index) => {
         return (
-          <motion.div variants={revealContainer} initial="initial" animate={isInView?"animate":"initial"}  viewport={{ once: true }} key={index} className="flex gap-2 leading-0 overflow-hidden">
+          <motion.div variants={revealContainer} initial="initial" animate={isInView?"animate":"initial"}  viewport={{ once: true }} key={index} className="flex flex-wrap gap-2 overflow-hidden">
            {phrase.split(" ").map((word,index)=>(
              <motion.h2
              key={index}

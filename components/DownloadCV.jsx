@@ -13,11 +13,11 @@ const DownloadCV = () => {
     <Link href='/sk_md_golam_arman_cv.pdf' download='sk_md_golam_arman_cv.pdf'>
       <motion.button
         variants={downloadButtonAnimation}
-        className='group flex origin-bottom  items-center gap-x-1  rounded-3xl border border-blackColor p-3   md:px-5'
+        className='group flex origin-bottom  items-center gap-x-1  rounded-3xl border border-blackColor p-2 sm:p-3   md:px-5'
       >
         <motion.p
           variants={downloadButtonTextAnimation}
-          className='body font-semibold'
+          className=' label sm:body font-semibold'
         >
           Download CV
         </motion.p>
