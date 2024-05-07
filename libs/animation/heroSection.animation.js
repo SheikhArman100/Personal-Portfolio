@@ -1,3 +1,6 @@
+import { delay, transform } from "framer-motion"
+import { Diameter } from "lucide-react"
+
 export const heroRevealContainer = {
   hidden: {},
   show: {
@@ -42,6 +45,33 @@ export const logoReveal = {
     }
   }
 }
+export const availableReveal={
+  hidden:{
+    scaleX:0
+  },
+  show:{
+    scaleX:1,
+    transition:{
+      delay:1.7,
+      duration:0.5,
+      
+      ease:"linear"
+    }
+  }
+}
+export const availableText={
+  hidden:{opacity:0},
+  show:{
+    opacity:1,
+    transition:{
+      delay:2.2,
+    ease:"linear"
+
+    }
+    
+  }
+}
+
 export const revealTitleAnimation =(index)=>( {
   hidden: { y: "100%" },
   show: {
@@ -87,12 +117,12 @@ export const wordAnimation=(index)=>({
 
 export const downloadButtonAnimation={
   hidden:{
-    scaleY:0
+    scaleX:0
   },
   show:{
-    scaleY:1,
+    scaleX:1,
     transition:{
-      delay:1.4,
+      delay:2.2,
       duration:0.4,
       ease:"linear"
     }
@@ -101,5 +131,34 @@ export const downloadButtonAnimation={
 export const downloadButtonTextAnimation={
   hidden:{opacity:0},
   show:{opacity:1,
-    transition:{delay:1.8,duration:0.3}}
+    transition:{delay:2.6,duration:0.3}}
+}
+export const navbarReveal={
+  hidden:{
+    scaleX:0,
+    x: "-50%",
+  },
+  show:{
+    scaleX:1,
+    x: "-50%",
+    transition:{
+      delay:2.6,
+      duration:0.7,
+      ease:"linear"
+    }
+  }
+}
+export const navbarText={
+  hidden:{
+    opacity:0
+  },
+  show:{
+    opacity:1,
+    transition:{
+      delay:3.3,
+      duration:0.4,
+      staggerChildren:0.3,
+      ease:"linear"
+    }
+  }
 }

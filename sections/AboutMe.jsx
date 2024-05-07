@@ -58,7 +58,7 @@ const AboutMe = () => {
           </AboutUsTitle>
 
           <AboutUsTitle>
-            <p className='text-[1.25rem] lg:heading-5 flex  flex-wrap justify-center  gap-x-2'>
+            <p className='text-[1.25rem] lg:heading-5 flex  flex-wrap justify-center  gap-x-2 font2'>
               I have been studying ReactJS for over a year now. Through an Udemy
               course, I began to learn ReactJS. Since then, I've always tried to
               stay up-to-date with the latest technology related to Reactjs
