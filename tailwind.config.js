@@ -11,9 +11,10 @@ module.exports = {
       colors:{
         blackColor:"hsl(232.9,70.8%,9.4%)",
         purpleColor:"hsl(255.4,55.6%,75.3%)",
-        greenColor:"hsl(72.5,72.6%,71.4%)",
-        whiteColor:"hsl(264,20%,95.1%)",
-        blueColor:"hsl(210,26.8%,78%)"
+        greenColor:"hsl(137,9%,15%)",
+        whiteColor:"hsl(45,14%,89%)",
+        blueColor:"hsl(210,26.8%,78%)",
+        yellowColor:"hsl(44,51%,75%)"
       }
     },
   },

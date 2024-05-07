@@ -1,14 +1,17 @@
 import SmoothScroll from '@/components/SmoothScroll.jsx'
-import { Cinzel, Inter } from 'next/font/google'
+import { Cinzel, Inter, Koulen, Roboto_Mono } from 'next/font/google'
 import './globals.css'
+import Overlay from '@/components/Overlay.jsx'
+import Navbar from '@/components/Navbar.jsx'
 
-const inter = Inter({
+const inter = Koulen({
   subsets: ['latin'],
+  weight:["400"]
   
 })
-const roboto=Cinzel({
+const roboto=Roboto_Mono({
   subsets:["latin"],
-  weight:["400","500","600","700","800","900"],
+  weight:["100","200","300","400","500","600","700"],
   variable:"--font-roboto"
 })
 export const metadata = {
@@ -20,7 +23,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <body className={`${inter.className} ${roboto.variable}`}>
-        <SmoothScroll>{children}</SmoothScroll>
+        <SmoothScroll>
+          <Overlay/>
+          {children}
+          <Navbar/>
+        </SmoothScroll>
       </body>
     </html>
   )

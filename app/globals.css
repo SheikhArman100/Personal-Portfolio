@@ -33,6 +33,9 @@
   }
 }
 @layer utilities {
+  .display-00{
+    @apply  text-[14rem] leading-[12rem] tracking-[0.2rem]
+  }
   .display-0 {
     @apply text-[9rem] leading-[8.6rem] tracking-[-0.2rem];
   }
@@ -104,5 +107,57 @@
   .font2 {
     font-family: var(--font-roboto);
   }
-
+  .overlay {
+    filter: blur(1px) drop-shadow(0 0 0 #c9c7c7);
+  }
+  .overlay:after {
+    content:"";
+  background-image:url("https://upload.wikimedia.org/wikipedia/commons/7/76/1k_Dissolve_Noise_Texture.png");
+  height: 300%;
+  width: 300%;
+  position: fixed;
+  opacity:0.02;
+   animation: grains 8s steps(10) infinite;
+  }
+  @keyframes grains {
+    0%, 100% { transform:translate(0, 0) }
+  10%{
+    transform:translate(-5%,-10%)
+  }
+  20%{
+    transform:translate(-15%,-20%)
+  }
+  30%{
+    transform:translate(-5%,-10%)
+  }
+  40%{
+    transform:translate(-15%,-20%)
+  }
+  
+  50%{
+    transform:translate(-5%,-10%)
+  }
+  60%{
+    transform:translate(-15%,-20%)
+  }
+  70%{
+    transform:translate(-5%,-10%)
+  }
+  80%{
+    transform:translate(-15%,-20%)
+  }
+  90%{
+    transform:translate(-5%,-10%)
+  }
+  100%{
+    transform:translate(-15%,-20%)
+  }
+  }
+  .glassEffect {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
 }

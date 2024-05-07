@@ -11,7 +11,7 @@ import {
   wordAnimation
 } from '@/libs/animation/heroSection.animation.js'
 import vector1 from '@/public/assets/vector1.png'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Dot } from 'lucide-react'
 import Image from 'next/image.js'
 import Link from 'next/link.js'
 const HeroSection = () => {
@@ -26,37 +26,41 @@ const HeroSection = () => {
       >
         <MotionDiv
           variants={heroRevealDiv}
-          className='origin-left bg-blueColor'
+          className='origin-left bg-greenColor'
         />
         <MotionDiv
           variants={heroRevealDiv}
-          className='origin-left bg-blueColor'
+          className='origin-left bg-greenColor'
         />
         <MotionDiv
           variants={heroRevealDiv}
-          className='origin-left bg-blueColor'
+          className='origin-left bg-greenColor'
         />
         <MotionDiv
           variants={heroRevealDiv}
-          className='origin-left bg-blueColor'
+          className='origin-left bg-greenColor'
         />
       </MotionDiv>
       <MotionDiv
         variants={heroContainer}
         initial='hidden'
         animate='show'
-        className='absolute left-0 top-0 flex h-full w-full flex-col justify-between px-4  py-4 sm:px-8 lg:px-[2rem] xl:px-[4rem]'
+        className='absolute left-0 top-0 flex h-full w-full flex-col justify-between px-4  py-4 sm:px-8 lg:px-[2rem] xl:px-[4rem] text-whiteColor'
       >
         <div className='flex items-center justify-between'>
           <Link href='/' className='relative'>
-            <h4 className='heading-4 font2 font-bold'>Sheikh Arman</h4>
+            <h4 className='heading-4 text-yellowColor '>Sheikh Arman</h4>
             <MotionDiv
               variants={logoReveal}
-              className='absolute left-0 top-0 h-full w-full origin-right  bg-blueColor'
+              className='absolute left-0 top-0 h-full w-full origin-right  bg-greenColor'
             />
           </Link>
 
-          <DownloadCV/>
+          <div className='flex items-center gap-1 py-2 px-4 glassEffect'>
+            <Dot strokeWidth={8} className='stroke-green-400 animate-pulse '/>
+            <h6 className='hidden sm:block body'>Available for work</h6>
+            <h6 className='body sm:hidden'>Available</h6>
+          </div>
         </div>
 
         <div className='mx-auto flex max-w-[1000px] flex-col xl:max-w-[1200px] xl:gap-y-3 '>
@@ -64,15 +68,15 @@ const HeroSection = () => {
             <MotionDiv
               variants={revealTitleAnimation(1)}
             
-              className='display-3 sm:display-2 md:display-1 xl:display-0  m-0 whitespace-nowrap text-center md:mr-[3rem] md:text-right '
+              className='display-3 sm:display-2 md:display-1 xl:display-0 2xl:display-00  m-0 whitespace-nowrap text-center md:mr-[3rem] md:text-right '
             >
               Full Stack
             </MotionDiv>
           </span>
-          <div className='flex w-full items-center justify-center gap-x-6 lg:gap-x-12 xl:gap-x-[5rem]'>
+          <div className='flex w-full items-center justify-center gap-x-6 lg:gap-x-12 xl:gap-x-[5rem] 2xl:gap-x-[8rem]'>
             <div className='mx-auto hidden  max-w-xs text-center md:flex flex-wrap gap-x-2 justify-center xl:mx-0'>
             {paragraph.split(" ").map((word, index) => (
-            <MotionDiv key={index} className='body font2 font-medium' variants={wordAnimation(index)}
+            <MotionDiv key={index} className='body font2 font-medium uppercase' variants={wordAnimation(index)}
 >
               {word}
 
@@ -80,7 +84,7 @@ const HeroSection = () => {
             ))}
             </div>
             
-            <MotionDiv variants={revealVectorAnimation} className='relative h-[120px] w-[120px] lg:h-[140px] lg:w-[140px]'>
+            <MotionDiv variants={revealVectorAnimation} className='relative h-[120px] w-[120px] lg:h-[140px] lg:w-[140px] 2xl:h-[180px] 2xl:w-[180px]'>
               <Image
                 src={vector1}
                 fill
@@ -92,7 +96,7 @@ const HeroSection = () => {
               <MotionDiv
                 variants={revealTitleAnimation(2)}
                 
-                className='display-3 sm:display-2 md:display-1 xl:display-0 m-0 whitespace-nowrap text-right '
+                className='display-3 sm:display-2 md:display-1 xl:display-0 2xl:display-00 m-0 whitespace-nowrap text-right '
               >
                 Web
               </MotionDiv>
@@ -103,7 +107,7 @@ const HeroSection = () => {
             <MotionDiv
               variants={revealTitleAnimation(3)}
               
-              className='display-3 sm:display-2 md:display-1 xl:display-0 m-0 whitespace-nowrap text-center '
+              className='display-3 sm:display-2 md:display-1 xl:display-0 2xl:display-00 m-0 whitespace-nowrap text-center '
             >
               Developer
             </MotionDiv>
@@ -121,7 +125,8 @@ const HeroSection = () => {
         </div>
 
         <div className='flex items-center justify-between '>
-          <Link href='#contactMe' className='body font-semibold flex items-center gap-x-1 border-b border-blackColor group'>Get in touch <ArrowRight className='size-4 group-hover:w-8'/> </Link>
+          {/* <Link href='#contactMe' className='body font-semibold flex items-center gap-x-1 border-b border-blackColor group'>Get in touch <ArrowRight className='size-4 group-hover:w-8'/> </Link> */}
+          <DownloadCV/>
           <FollowMe />
         </div>
       </MotionDiv>
