@@ -78,7 +78,7 @@ const HeroSection = () => {
           <span className='overflow-hidden'>
             <MotionDiv
               variants={revealTitleAnimation(1)}
-              className='display-3 sm:display-2 md:display-1 xl:display-0 2xl:display-00  m-0 whitespace-nowrap text-center md:mr-[3rem] md:text-right '
+              className='display-2 md:display-1 xl:display-0 2xl:display-00  m-0 whitespace-nowrap text-center md:mr-[3rem] md:text-right '
             >
               Full Stack
             </MotionDiv>
@@ -88,7 +88,7 @@ const HeroSection = () => {
               {paragraph.split(' ').map((word, index) => (
                 <MotionDiv
                   key={index}
-                  className='body font2 font-medium uppercase'
+                  className='body font2 font-[400] uppercase'
                   variants={wordAnimation(index)}
                 >
                   {word}
@@ -110,7 +110,7 @@ const HeroSection = () => {
             <span className='overflow-hidden'>
               <MotionDiv
                 variants={revealTitleAnimation(2)}
-                className='display-3 sm:display-2 md:display-1 xl:display-0 2xl:display-00 m-0 whitespace-nowrap text-right '
+                className='display-2 md:display-1 xl:display-0 2xl:display-00 m-0 whitespace-nowrap text-right '
               >
                 Web
               </MotionDiv>
@@ -120,7 +120,7 @@ const HeroSection = () => {
           <span className='overflow-hidden'>
             <MotionDiv
               variants={revealTitleAnimation(3)}
-              className='display-3 sm:display-2 md:display-1 xl:display-0 2xl:display-00 m-0 whitespace-nowrap text-center '
+              className='display-2 md:display-1 xl:display-0 2xl:display-00 m-0 whitespace-nowrap text-center '
             >
               Developer
             </MotionDiv>
@@ -129,7 +129,7 @@ const HeroSection = () => {
             {paragraph.split(' ').map((word, index) => (
               <MotionDiv
                 key={index}
-                className='body font2 font-medium'
+                className='body font2 font-[400] uppercase'
                 variants={wordAnimation(index)}
               >
                 {word}
