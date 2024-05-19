@@ -1,38 +1,82 @@
-import Image from 'next/image.js'
+'use client'
+import {
+  availableReveal,
+  availableText,
+  bottomTextAnimation,
+  dropTextAnimation,
+  logoReveal,
+  mailAnimation,
+  revealTitleAnimation,
+  sectionAnimation
+} from '@/libs/animation/contactme.animation.js'
+import { motion } from 'framer-motion'
+import { Copyright, Dot } from 'lucide-react'
 import Link from 'next/link.js'
-import React from 'react'
-import logo from '@/public/assets/logo.png'
-import { Copyright, Facebook, Linkedin, LinkedinIcon } from 'lucide-react'
 
 const ContactMe = () => {
   return (
-    <section id='contactMe' className='h-screen w-full bg-yellowColor px-4  py-4 sm:px-8 lg:px-[2rem] xl:px-[4rem] flex flex-col'>
+    <motion.section
+      variants={sectionAnimation}
+      initial='hidden'
+      whileInView='show'
+      viewport={{ margin: '-40%',once:true }}
+      className='text flex h-screen w-full flex-col bg-greenColor  px-4 py-4 text-whiteColor sm:px-8 lg:px-[2rem] xl:px-[4rem]'
+    >
       <div className='flex items-center justify-between'>
         <Link href='/' className='relative'>
-          <Image
-            src={logo}
-            height='40'
-            width='200'
-            alt='logo'
-            className='object-cover'
+          <h4 className='heading-4 text-yellowColor '>Sheikh Arman</h4>
+          <motion.div
+            variants={logoReveal}
+            className='absolute left-0 top-0 h-full w-full origin-right   bg-greenColor'
           />
         </Link>
-        <span className='body sm:heading-5 font-medium'>Open for work</span>
+        <motion.div
+          variants={availableReveal}
+          className=' glassEffect origin-left px-4 py-2'
+        >
+          <motion.div
+            variants={availableText}
+            className='flex items-center gap-1'
+          >
+            <Dot strokeWidth={8} className='animate-pulse stroke-green-400 ' />
+            <h6 className='body hidden sm:block'>Open for work</h6>
+            <h6 className='body sm:hidden'>Available</h6>
+          </motion.div>
+        </motion.div>
       </div>
-      <div className='flex-1 flex flex-col items-center justify-center'>
-        <span className='display-3 md:display-2 xl:display-0 text-center '>Want to Hire?</span>
-        <div className='flex flex-col items-center justify-center'>
-          <span className='body'>Drop me an email:</span>
-          <span className='heading-5'>sheikharman100@gmail.com</span>
+      <div className='flex flex-1 flex-col items-center justify-center'>
+        <div className='overflow-hidden '>
+          <motion.p
+            variants={revealTitleAnimation(1)}
+            initial='hidden'
+            whileInView='show'
+            viewport={{once:true}}
+            className='display-3 md:display-2 xl:display-0 m-0  whitespace-nowrap text-center '
+          >
+            Want to Hire?
+          </motion.p>
         </div>
 
+        <div className='flex flex-col items-center justify-center'>
+          <motion.span variants={dropTextAnimation} className='body'>Drop me an email :</motion.span>
+          <span className='heading-5 font-sans  text-yellowColor relative'>
+            sheikharman100@gmail.com
+            <motion.div
+             variants={mailAnimation}
+            className='absolute left-0 top-0 h-full w-full origin-right   bg-greenColor'
+          />
+          </span>
+        </div>
       </div>
       <div className='flex items-center justify-between'>
-       <span className='body font-medium'>Dhaka,Bangladesh</span>
-       <button></button>
-       <div className='flex items-center gap-x-1 body font-medium'><Copyright/><span>March,2024</span></div>
+        <motion.span variants={bottomTextAnimation} className='body font-medium '>Dhaka,Bangladesh</motion.span>
+        <button></button>
+        <div className='body flex items-center gap-x-1 font-medium'>
+          <Copyright className='stroke-yellowColor' />
+          <motion.span variants={bottomTextAnimation}>May,2024</motion.span>
+        </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

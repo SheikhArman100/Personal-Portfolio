@@ -7,18 +7,15 @@ import Link from 'next/link.js'
 
 const Projects = () => {
   return (
-    <article className='relative een'>
-      <MarqueeTitle />
+    <section className='relative bg-greenColor text-whiteColor'>
+      
 
-      <section
-        className=''
-        
-      >
+     
         {projects.map(project => (
           <Project key={project.id} project={project} />
         ))}
-      </section>
-    </article>
+      
+    </section>
   )
 }
 
@@ -34,8 +31,7 @@ const MarqueeTitle = () => {
 const Project = ({ project }) => {
   return (
     <div className='relative flex h-screen w-full items-center justify-center '>
-      <Grid/>
-      <div className='absolute  flex flex-col gap-3 md:flex-row md:items-center md:gap-x-8 lg:gap-x-[5rem] xl:gap-x-[8rem] '>
+      <div className='absolute  flex flex-col gap-3 md:flex-row md:items-center md:gap-x-8 lg:gap-x-[5rem] xl:gap-x-[8rem] glassEffect w-full max-w-6xl p-3 md:p-10'>
         <div className='relative mx-auto flex aspect-[1/1.2] w-80 items-center justify-center bg-zinc-800 lg:w-[25rem]'>
           <CloudinaryVideo width='1920' height='1080' src={project.video} autoplay="on-scroll" loop muted playsinline />
         </div>
