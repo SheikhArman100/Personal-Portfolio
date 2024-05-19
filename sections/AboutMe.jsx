@@ -75,12 +75,14 @@ const AboutMe = () => {
             paragraph='Hello!! I am Sk. MD. Golam Arman, a passionate full stack web developer. Hardworking by nature, I thrive on challenges and continuously seek to expand my skill set in the ever-evolving field of web development. I bring digital concepts to life with precision and creativity.'
             paragraphStyle='hidden md:flex md:heading-3 2xl:heading-2 w-full max-w-6xl'
           />
+           <RevealParagraph
+            paragraph='Hello!! I am Sk. MD. Golam Arman, a passionate full stack web developer. I bring digital concepts to life with precision and creativity.'
+            paragraphStyle='heading-4 sm:heading-3 lg:heading-2 w-full max-w-6xl flex md:hidden'
+          />
 
-          <p className='heading-4 sm:heading-3 lg:heading-2 w-full max-w-6xl md:hidden'>
-            Hello!! I am Sk. MD. Golam Arman, a passionate full stack web
-            developer. I bring digital concepts to life with precision and
-            creativity.
-          </p>
+
+
+         
         </div>
         <div className='flex w-full   flex-1  items-center justify-center'>
           <div className='flex w-full max-w-3xl flex-wrap justify-center gap-12'>
