@@ -25,6 +25,7 @@ import mysql from '@/public/assets/mysql.png'
 // import linkedin from '@/public/assets/linkedin.png'
 import { MotionDiv } from '@/components/MotionDiv.jsx'
 import { revealImageAnimation } from '@/libs/animation/aboutMe.animation.js'
+import RevealParagraph from '@/components/RevealParagraph.js'
 const skills = [
   {
     name: 'ReactJS',
@@ -58,7 +59,7 @@ const AboutMe = () => {
             initial='initial'
             whileInView='animate'
             viewport={{ once: true }}
-            className='absolute left-0 top-0 z-10 h-full w-full origin-bottom bg-greenColor'
+            className='absolute left-0 top-0 z-10 h-full w-full origin-right bg-greenColor'
           />
           <Image
             src={image1}
@@ -70,17 +71,15 @@ const AboutMe = () => {
       </div>
       <div className='flex w-full flex-1 flex-col gap-4 '>
         <div className='flex  w-full justify-end '>
-          <p className='hidden md:block md:heading-3 2xl:heading-2 w-full max-w-6xl'>
+          <RevealParagraph
+            paragraph='Hello!! I am Sk. MD. Golam Arman, a passionate full stack web developer. Hardworking by nature, I thrive on challenges and continuously seek to expand my skill set in the ever-evolving field of web development. I bring digital concepts to life with precision and creativity.'
+            paragraphStyle='hidden md:flex md:heading-3 2xl:heading-2 w-full max-w-6xl'
+          />
+
+          <p className='heading-4 sm:heading-3 lg:heading-2 w-full max-w-6xl md:hidden'>
             Hello!! I am Sk. MD. Golam Arman, a passionate full stack web
-            developer. Hardworking by nature, I thrive on challenges and
-            continuously seek to expand my skill set in the ever-evolving field
-            of web development. I bring digital concepts to life with precision
-            and creativity.
-          </p>
-          <p className='md:hidden heading-4 sm:heading-3 lg:heading-2 w-full max-w-6xl'>
-            Hello!! I am Sk. MD. Golam Arman, a passionate full stack web
-            developer. I bring digital concepts to life with precision
-            and creativity.
+            developer. I bring digital concepts to life with precision and
+            creativity.
           </p>
         </div>
         <div className='flex w-full   flex-1  items-center justify-center'>

@@ -19,10 +19,10 @@ export const revealContainer = {
   }
  export  const revealImageAnimation={
   initial:{
-    scaleY:1
+    scaleX:1
   },
   animate:{
-    scaleY:0,
+    scaleX:0,
     transition:{
       duration:1
     }
