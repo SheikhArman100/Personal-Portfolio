@@ -51,7 +51,10 @@ const skills = [
 
 const AboutMe = () => {
   return (
-    <section className=' flex min-h-screen w-full flex-col gap-6 overflow-hidden bg-greenColor px-4  py-8 text-whiteColor sm:px-8 md:justify-between md:py-[3rem]   lg:flex-row lg:px-[2rem]  xl:px-[4rem]'>
+    <section
+      id="about"
+      className='flex min-h-screen w-full flex-col gap-6 overflow-hidden bg-greenColor px-4  py-8 text-whiteColor sm:px-8 md:justify-between md:py-[3rem]   lg:flex-row lg:px-[2rem]  xl:px-[4rem]'
+    >
       <div className=' flex items-end'>
         <div className=' relative h-80 w-64 bg-greenColor md:h-[22rem] md:w-60 lg:h-[25rem] lg:w-72  xl:h-[28rem] xl:w-[20rem] '>
           <MotionDiv
@@ -75,14 +78,10 @@ const AboutMe = () => {
             paragraph='Hello!! I am Sk. MD. Golam Arman, a passionate full stack web developer. Hardworking by nature, I thrive on challenges and continuously seek to expand my skill set in the ever-evolving field of web development. I bring digital concepts to life with precision and creativity.'
             paragraphStyle='hidden md:flex md:heading-3 2xl:heading-2 w-full max-w-6xl'
           />
-           <RevealParagraph
+          <RevealParagraph
             paragraph='Hello!! I am Sk. MD. Golam Arman, a passionate full stack web developer. I bring digital concepts to life with precision and creativity.'
             paragraphStyle='heading-4 sm:heading-3 lg:heading-2 w-full max-w-6xl flex md:hidden'
           />
-
-
-
-         
         </div>
         <div className='flex w-full   flex-1  items-center justify-center'>
           <div className='flex w-full max-w-3xl flex-wrap justify-center gap-12'>
@@ -92,31 +91,6 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-      {/* <div className=' flex-1 flex flex-col gap-4'>
-        <div className='w-full  flex justify-end '>
-        <p className=' w-full max-w-6xl heading-5 lg:heading-2'>Hello!! I am Sk. MD. Golam Arman, a passionate full stack web developer. Hardworking by nature, I thrive on challenges and continuously seek to expand my skill set in the ever-evolving field of web development. I bring digital concepts to life with precision and creativity.</p>
-        <p className='md:hidden  max-w-6xl heading-5 lg:heading-2'>Hello!! I am Sk. MD. Golam Arman, a passionate full stack web developer. I bring digital concepts to life with precision and creativity.</p>
-
-        </div>
-        
-        
-        <div className='w-full flex-1   flex  items-center justify-center'>
-          <div className='max-w-3xl w-full flex flex-wrap justify-center gap-12'>
-            {
-              skills.map((skill,index)=>(
-                <SkillCard key={index} skill={skill}/>
-              ))
-            }
-          
-
-          </div>
-
-         
-          
-          
-          
-        </div>
-      </div> */}
     </section>
   )
 }

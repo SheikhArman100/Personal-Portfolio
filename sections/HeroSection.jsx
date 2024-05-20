@@ -20,7 +20,7 @@ const HeroSection = () => {
   const paragraph =
     'Full stack web developer with expertise in Reactjs and Nodejs. I also have a strong foundation in programming languages such as Python and Javascript'
   return (
-    <section className='relative h-screen w-full bg-white'>
+    <section id='hero' className='relative h-screen w-full bg-white'>
       <MotionDiv
         variants={heroRevealContainer}
         initial='hidden'

@@ -16,6 +16,7 @@ import Link from 'next/link.js'
 const ContactMe = () => {
   return (
     <motion.section
+    id='contact'
       variants={sectionAnimation}
       initial='hidden'
       whileInView='show'
@@ -71,10 +72,10 @@ const ContactMe = () => {
       <div className='flex items-center justify-between'>
         <motion.span variants={bottomTextAnimation} className='body font-medium '>Dhaka,Bangladesh</motion.span>
         <button></button>
-        <div className='body flex items-center gap-x-1 font-medium'>
+        <motion.div variants={bottomTextAnimation} className='body flex items-center gap-x-1 font-medium'>
           <Copyright className='stroke-yellowColor' />
-          <motion.span variants={bottomTextAnimation}>May,2024</motion.span>
-        </div>
+          <span >May,2024</span>
+        </motion.div>
       </div>
     </motion.section>
   )
