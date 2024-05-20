@@ -67,7 +67,9 @@ const AboutMe = () => {
           <Image
             src={image1}
             fill
-            alt='image2'
+            alt='profile'
+            sizes="(min-width: 1280px) 320px, (min-width: 1040px) 288px, (min-width: 780px) 240px, 256px"
+            placeholder='blur'
             className='object-center md:object-cover'
           />
         </div>

@@ -12,6 +12,7 @@ const CloudinaryVideo = ({ video,photo }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       style={{ width: '100%', height: 'auto' }}
+      className="bg-gray-600 rounded-md"
     >
       {!isHovered ? (
         <CldImage
@@ -19,6 +20,8 @@ const CloudinaryVideo = ({ video,photo }) => {
           src={photo}
           fill
           alt="Thumbnail"
+          sizes="(min-width: 1040px) 400px, 320px"
+          
           
         />
       ) : (

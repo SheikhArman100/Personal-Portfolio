@@ -103,6 +103,8 @@ const HeroSection = () => {
               <Image
                 src={vector1}
                 fill
+                priority
+                sizes='(min-width: 1540px) 180px, (min-width: 1040px) 140px, 120px'
                 className='h-full w-full object-cover'
                 alt='hero section vector'
               />

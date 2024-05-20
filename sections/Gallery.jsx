@@ -62,7 +62,7 @@ const Column = ({ images ,y}) => {
             key={index}
             className=' relative h-[30%] w-full overflow-hidden rounded-lg'
           >
-            <Image src={image} alt='image' placeholder='blur' fill className='object-cover' />
+            <Image src={image} alt='image' placeholder='blur' fill sizes="(min-width: 1080px) 25vw, 246px" className='object-cover' />
           </div>
         )
       })}
