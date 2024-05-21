@@ -3,6 +3,7 @@ import { Cinzel, Inter, Koulen, Roboto_Mono } from 'next/font/google'
 import './globals.css'
 import Overlay from '@/components/Overlay.jsx'
 import Navbar from '@/components/Navbar.jsx'
+import { Analytics } from '@vercel/analytics/react';
 
 const inter = Koulen({
   subsets: ['latin'],
@@ -50,6 +51,7 @@ export default function RootLayout({ children }) {
           {children}
           <Navbar />
         </SmoothScroll>
+        <Analytics/>
       </body>
     </html>
   )
